@@ -8,6 +8,7 @@ export function ApiStack({ stack, app }) {
   const api = new Api(stack, 'Api', {
     defaults: {
       function: {
+        authorizer: 'iam',
         bind: [table],
       },
     },
